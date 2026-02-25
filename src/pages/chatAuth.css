@@ -1,0 +1,68 @@
+/* full screen center */
+.auth-wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f0f2f5;
+  font-family: Arial, sans-serif;
+}
+
+/* card */
+.auth-card {
+  width: 360px;
+  background: white;
+  padding: 32px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.auth-card h2 {
+  margin-bottom: 6px;
+}
+
+.sub {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+/* input */
+.auth-card input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+/* button */
+.auth-card button {
+  width: 100%;
+  padding: 12px;
+  background: #25d366; /* WhatsApp green */
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.auth-card button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* switch link */
+.switch {
+  margin-top: 18px;
+  font-size: 14px;
+}
+
+.switch a {
+  color: #25d366;
+  text-decoration: none;
+  font-weight: bold;
+}

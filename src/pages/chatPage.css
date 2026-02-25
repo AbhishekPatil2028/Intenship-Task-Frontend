@@ -1,0 +1,421 @@
+
+
+.wa-container {
+  display: flex;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+.wa-user:hover,
+.wa-user.active {
+  background: #e9edef;
+}
+
+
+.wa-chat {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+
+.wa-header {
+  padding: 15px;
+  background: #ededed;
+  font-weight: bold;
+}
+
+.wa-messages {
+  flex: 1;
+  padding: 15px;
+  background: #efeae2;
+  overflow-y: auto;
+}
+
+.msg {
+  margin-bottom: 8px;
+}
+
+.msg.own {
+  text-align: right;
+}
+
+.bubble {
+  display: inline-block;
+  background: #fff;
+  padding: 8px;
+  border-radius: 8px;
+  max-width: 70%;
+}
+
+.msg.own .bubble {
+  background: #dcf8c6;
+}
+
+.time {
+  font-size: 10px;
+  text-align: right;
+  color: gray;
+}
+
+.date-label {
+  text-align: center;
+  font-size: 12px;
+  color: gray;
+  margin: 10px 0;
+}
+
+.typing {
+  font-size: 12px;
+  color: gray;
+}
+
+.wa-input {
+  display: flex;
+  padding: 10px;
+  background: #f0f2f5;
+}
+
+.wa-input input {
+  flex: 1;
+  padding: 8px;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-box {
+  background: white;
+  padding: 20px;
+  border-radius: 6px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.danger {
+  background: red;
+  color: white;
+}
+/* HEADER */
+.wa-header {
+  padding: 10px 14px;
+  border-bottom: 1px solid #ddd;
+  background: #f0f2f5;
+  display: flex;
+  flex-direction: column;
+}
+
+/* USER NAME */
+.wa-header-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #111;
+}
+
+/* ONLINE / LAST SEEN */
+.wa-header-status {
+  font-size: 12px;
+  margin-top: 2px;
+  color: #667781;
+}
+
+/* ONLINE */
+.wa-header-status.online {
+  color: #25d366; /* WhatsApp green */
+}
+
+/* LAST SEEN / OFFLINE */
+.wa-header-status.offline {
+  color: #667781; /* WhatsApp gray */
+}
+
+/* ===== Typing animation in header (WhatsApp style) ===== */
+
+.wa-header-status.typing-active {
+  color: #25d366; /* WhatsApp green */
+  font-style: italic;
+}
+
+/* dots */
+.dot-typing {
+  animation: blink 1.4s infinite both;
+  font-size: 18px;
+  margin-left: 1px;
+}
+
+/* delay for each dot */
+.dot-typing.one {
+  animation-delay: 0s;
+}
+.dot-typing.two {
+  animation-delay: 0.2s;
+}
+.dot-typing.three {
+  animation-delay: 0.4s;
+}
+
+/* ================= LOGOUT MODAL ================= */
+
+.wa-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.wa-modal {
+  background: #fff;
+  width: 320px;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  animation: scaleIn 0.2s ease;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.wa-modal-title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.wa-modal-text {
+  font-size: 14px;
+  color: #555;
+  margin: 12px 0 20px;
+}
+
+.wa-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.wa-btn {
+  border: none;
+  padding: 8px 16px;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.wa-btn.cancel {
+  background: #f0f0f0;
+  color: #333;
+}
+
+.wa-btn.cancel:hover {
+  background: #e2e2e2;
+}
+
+.wa-btn.danger {
+  background: #e53935;
+  color: #fff;
+}
+
+.wa-btn.danger:hover {
+  background: #d32f2f;
+}
+
+/* ================= SIDEBAR ================= */
+
+.wa-sidebar {
+  width: 30%;
+  background: #f0f2f5;
+  border-right: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+}
+
+/* profile top */
+.wa-profile {
+  height: 60px;
+  background: #ededed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 14px;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.wa-profile button {
+  background: none;
+  border: none;
+  color: #54656f;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.wa-profile button:hover {
+  color: #111;
+}
+
+/* user list */
+.wa-user-list {
+  flex: 1;
+  overflow-y: auto;
+}
+
+/* single user row */
+.wa-user {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.wa-user:hover {
+  background: #e9edef;
+}
+
+.wa-user.active {
+  background: #d1f4cc; /* WhatsApp light green */
+}
+
+/* left name + dot */
+.wa-user-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.wa-user-name {
+ font-size: 15px;
+  font-weight: 500;
+  color: #111;
+}
+
+/* online dot */
+.dot {
+  width: 9px;
+  height: 9px;
+  background: #25d366;
+  border-radius: 50%;
+}
+
+/* unread badge */
+.badge {
+  min-width: 20px;
+  height: 20px;
+  background: #25d366;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+@keyframes blink {
+  0% {
+    opacity: 0.2;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+
+
+/* ================= AVATAR ================= */
+
+.wa-user-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.wa-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #cfd8dc;
+  color: #37474f;
+  font-weight: 600;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.wa-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.wa-avatar.large {
+  width: 44px;
+  height: 44px;
+  font-size: 18px;
+}
+
+/* Online dot on avatar */
+.wa-avatar-online {
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  width: 10px;
+  height: 10px;
+  background: #25d366;
+  border: 2px solid #f0f2f5;
+  border-radius: 50%;
+}
+
+/* Header layout */
+.wa-header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.wa-user-last {
+  font-size: 13px;
+  color: #667781;
+  margin-top: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.wa-user-lastmsg{
+  font-size: 13px;
+  color: #667781;        /* WhatsApp gray */
+  margin-top: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 180px;     /* adjust if needed */
+  font-weight: 400;
+}

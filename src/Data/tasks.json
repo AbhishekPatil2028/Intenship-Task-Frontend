@@ -1,0 +1,54 @@
+{
+  
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Task 1:- UserCard",
+      "date": "31/12/2025",
+      "route": "/usercard",
+      "status": "completed"
+    },
+     {
+      "id": 2,
+      "title": "Task 2:- Contact Form",
+      "date": "31/12/2025",
+      "route": "/contactform",
+      "status": "completed"
+    },
+    {
+       "id": 3,
+      "title": "Task 3:- Send email using Nodejs",
+      "date": "05/01/2025",
+      "route": "/mail",
+      "status": "completed"
+    },
+    {
+       "id": 4,
+      "title": "Task 4:- Upload img/video",
+      "date": "05/01/2025",
+      "route": "/upload",
+      "status": "completed"
+    },
+    {
+       "id": 5,
+      "title": "Task 5:- User-Authentication",
+      "date": "06/01/2025",
+      "route": "/auth",
+      "status": "completed"
+    },
+    {
+       "id": 6,
+      "title": "Task 6:- Chat Application",
+      "date": "08/01/2025",
+      "route": "/chat-home",
+      "status": "completed"
+    },
+    {
+       "id": 7,
+      "title": "Task 6:- Passport.js-Auth",
+      "date": "12/01/2025",
+      "route": "/passport-register",
+      "status": "completed"
+    }
+  ]
+}
